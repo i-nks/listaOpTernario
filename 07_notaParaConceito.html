@@ -10,11 +10,17 @@
     // Entre 5.9 e zero            E
 
     //Entrada
-
+    const nota = Number(prompt(`Informe sua nota.`).trim().replace(",","."));
 
     //Processamento
-
+    let mensagemFinal = (nota <= 10 && nota >= 9) ? `Tirou nota A.`
+    : (nota >= 8) ? `Tirou nota B.`
+    : (nota >= 7) ? `Tirou nota C.`
+    : (nota >= 6) ? `Tirou nota D.`
+    : (nota < 6) ? `Tirou nota E.`
+    : `Valor inválido.`
     
     //Saída
+    alert(mensagemFinal);
 
 </script>

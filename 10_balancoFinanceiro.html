@@ -10,11 +10,22 @@
     // Verifique se o usuário ganha mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
 
     //Entrada
+    const salario = Number(prompt(`Informe seu salário.`).trim());
+    const agua = Number(prompt(`Informe quanto você gasta com água.`).trim());
+    const enegia = Number(prompt(`Informe quanto você gasta com energia.`).trim());
+    const telefone = Number(prompt(`Informe quanto você gasta com telefone.`).trim());
+    const mercado = Number(prompt(`Informe quanto você gasta com supermercado.`).trim());
 
+    const total = agua + enegia + telefone + mercado;
 
     //Processamento
 
+    let mensagemFinal = (salario > total) ? `Você consegue pagar com seu salário. O troco foi de R$ ${(salario - total)}.`
+    : (salario < total) ? `Você não consegue pagar com seu salário. O valor faltant é de R$ ${(total - salario)}.`
+    : (salario == total) ? `O valor é exatamente igual. Não sobrará troco.`
+    : `Resposta inválida.`
     
     //Saída
+    alert(mensagemFinal);
     
 </script>

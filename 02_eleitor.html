@@ -5,10 +5,17 @@
 
     //Entrada
 
+    const anoNacimento = parseInt(prompt('Informe seu ano de nascimento').trim());
 
     //Processamento
 
+    const anoAtual = new Date().getFullYear();
+    const idade = anoAtual - anoNacimento;
+
+    let mensagemFinal = (idade < 16) ? "Você não pode votar" : (idade < 18) ? "Você pode votar (opcional)" : "Você deve votar";
 
     //Saída
+
+    document.write(mensagemFinal);
 
 </script>

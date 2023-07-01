@@ -9,10 +9,16 @@
 
     //Entrada
 
+    const porte = prompt(`Qual o porte do seu cão? (1 para Pequeno; 2 para Médio; 3 para Grande.)`).trim();
+    const idade = Number(prompt(`Informe a idade de seu cão.`).trim());
 
     //Processamento
+    let mensagemFinal = (porte == "1") ? `A idade de seu cão é de ${(5 * idade)} anos caninos.`
+    : (porte == "2") ? `A idade de seu cão é de ${(6 * idade)} anos caninos.`
+    : (porte == "3") ? `A idade de seu cão é de ${(7 * idade)} anos caninos.`
+    : `Resposta inválida.`
 
-    
     //Saída
+    alert(mensagemFinal);
 
-</script>
+    </script>
